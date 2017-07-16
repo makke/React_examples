@@ -10,7 +10,7 @@
         <div id='react-container'></div>
         <script type="text/babel">
 
-            var MyComponent = React.createClass({
+            class MyComponent extends React.Component{
                 render() {
                     return <div>
                         <h1>{this.props.text}</h1>
@@ -18,7 +18,7 @@
                         <p>{this.props.children}</p>
                     </div>
                 }
-            })
+            }
 
             ReactDOM.render(<div>
                 <MyComponent text="Heading Text of Component" name="Sara">
