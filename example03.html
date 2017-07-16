@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <script src="https://unpkg.com/react@15/dist/react.js"></script>
+      <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+        <title>React Components</title>
+    </head>
+    <body>
+        <div id='react-container'></div>
+        <script type="text/babel">
+
+            var MyComponent = React.createClass({
+                render() {
+                    return <div>
+                        <h1>{this.props.text}</h1>
+                        <strong>Name: {this.props.name}</strong>
+                        <p>{this.props.children}</p>
+                    </div>
+                }
+            })
+
+            ReactDOM.render(<div>
+                <MyComponent text="Heading Text of Component" name="Sara">
+                This is a child
+                </MyComponent>
+                <MyComponent text="I am also a Component" name="Edith">
+                This is a child 2
+                </MyComponent>
+                <MyComponent text="I have been reused!" name="Marco">
+                This is a child 3
+                </MyComponent>
+                </div>,
+                document.getElementById('react-container'))
+
+        </script>
+    </body>
+</html>
