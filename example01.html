@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://unpkg.com/react@15/dist/react.js"></script>
+        <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+        <title>My First React File</title>
+        <style>
+          div {
+              background-color: green;
+          }
+          p {
+              background-color: yellow;
+          }
+        </style>
+    </head>
+    <body>
+        <div id='react-container'>aaa</div>
+        <div id='react-container2'>bbb</div>
+        <script>
+            ReactDOM.render(
+                React.createElement('p', null, 'Hello World 2'),
+                document.getElementById('react-container2'))
+        </script>
+
+    </body>
+</html>
